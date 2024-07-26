@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>about</title>
+</head>
+<body>
+	
+	<section>
+
+	
+	<div class="about text-center mt-3 " style="color: white;">
+		
+				<h1>About Page</h1>
+				<div style="background-color: black; margin-left: 15px; margin-right: 15px; margin-top: 30px; border-radius: 25px;" >
+					
+				<h3  style="font-style: italic; padding: 20px;">"This is My Contact Manager Project That I've developed using Spring Boot, Spring MVC, Hibernate, MySQL, and various other front-end  & frameworks and libraries. In this Project, I have created a feature where you can add your contacts after Registering yourself, and then you can log-in to add your contacts. You can Update,Delete,View & change passwords, and perform many other tasks. This project ensures the security of your contacts.If You forgot Your Password While Login then There is Also Option for the Change Password Aswell!!"</h3>
+				</div>
+				
+				<a  th:href="@{/signup}" class="btn btn-primary mt-3">Add Contact</a>
+				
+		
+		
+	</div>
+
+		
+	</section>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base::Layout(~{::section})}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>add</title>
+</head>
+
+<body>
+
+	<section>
+		<div class="card " style="margin-right: 25px">
+			<div class="card-body">
+				<h1 class="text-center">Update contact</h1>
+								
+				
+				
+				<div class="container-fluid mt-1">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<form th:action="@{/user/process-update}" th:object="${contact}"
+								 method="post" class="mt-2">
+
+
+<input type="hidden" th:value="${contact.cid}" name="cid">
+
+								<!--First name-->
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-right: 12px">
+											<i class="fa-solid fa-plus"></i>
+										</div>
+									</div>
+
+									<input type="text" name="cname" placeholder="Enter Your Name" required	class="form-control" 
+							th:value="${contact.cname}"		/>
+								</div>
+
+
+								<!--Second name-->
+
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-right: 12px">
+											<i class="fas fa-user-alt"></i>
+										</div>
+									</div>
+
+									<input type="text" name="secondname"   required placeholder="Enter Your Second Name" th:value="${contact.secondname}"
+										class="form-control" />
+								</div>
+
+								<!--phone-->
+
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-right: 12px">
+											<i class="fas fa-phone"></i>
+										</div>
+									</div>
+
+									<input type="text" name="phone" placeholder="Enter Your Phone No." required th:value="${contact.phone}"
+										class="form-control" />
+								</div>
+
+
+								<!--Email-->
+
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-right: 12px">
+											@
+										</div>
+									</div>
+
+									<input type="email" name="email" placeholder="Enter Your Email" required  th:value="${contact.email}"
+										class="form-control" />
+								</div>
+
+								<!--Work-->
+
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+										<div class="input-group-text" style="margin-right: 12px">
+											<i class="fa fa-briefcase"></i>
+										</div>
+									</div>
+
+									<input type="text" name="work" placeholder="Enter Your Work" class="form-control" required  th:value="${contact.work}"/>
+								</div>
+
+								<!--Description-->
+
+								<div class="form-group mt-3">
+									<textarea placeholder="Enter Contact Description" name="description" rows="10" th:text="${contact.description}"
+										class="form-control"></textarea>
+								</div>
+								
+								<div class="container mt-2 text-center">
+									<button class="btn btn-outline-primary">Save Contact</button>
+								</div>
+
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+
+</html>

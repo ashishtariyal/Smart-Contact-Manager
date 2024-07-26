@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Smart-Contact-manger</title>
+</head>
+<body>
+	
+	<section>
+<div >
+	<div class="card text-center" style=" border-radius: 20px; width: 70%; margin-left: 120px; border: black 1px solid;">
+	<div class="card-body" th:if="${contact}">
+		<div class="container text-center">
+			
+		<h1 class="text-center"><i class="fa-solid fa-user-pen fa-3x"></i></h1>
+	 
+	   <h1><span th:text="${contact.cname}"></span> <span th:text="${contact.secondname}"> </span></h1>
+	   <h3>Email : <span th:text="${contact.email}"></span></h3>
+	  <h3>Phone No. : <span th:text="${contact.phone}"></span></h3>
+	   <h3>Work : <span th:text="${contact.work}"></span></h3>
+	  <h3> About : <span th:text="${contact.description}"></span></h3>
+	        
+	
+		</div>
+	</div>
+</div>
+
+
+</div>
+<h1 th:unless="${contact}">You Don't Have Permission To See This Contact!!</h1>
+
+		
+	</section>
+</body>
+</html>

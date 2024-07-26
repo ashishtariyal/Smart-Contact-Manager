@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>about</title>
+</head>
+<body>
+	
+	<section>
+		
+		<div th:each="u :${user}">
+			
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 offset-md-3">
+			
+			
+		<div  class="card" style="width: 25rem; color: rgb(255, 0, 128); font-family: Georgia, serif; font-style: inherit; ">
+  <img th:src="@{/img/profile.jpeg}" class="card-img-top" alt="..." style="height: 180px;">
+  <div class="card-body text-center">
+    <h2 class="card-title"><span th:text="${u.name}"></span></h2>
+    <h2><span th:text="${u.email}"></span></h2>
+    <h2><span th:text="${u.role}"></span></h2>
+  
+    <h2><span th:text="${u.about}"></span></h2>
+    
+  </div>
+</div>
+</div>
+	</div>
+</div>
+		
+		</div>
+	</section>
+</body>
+</html>

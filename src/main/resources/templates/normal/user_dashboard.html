@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf. org" th:replace="normal/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>about</title>
+<style>
+	
+	
+</style>
+</head>
+<body>
+	
+	<section>
+<div class="container">
+	<div class="card" >
+		<div class="card-body my-1">
+			<div class="container text-center">
+				<img th:src="@{/img/contact.png}" alt="NO-IMAGE" />
+			
+				<h1 class="text-center  font-italic" style="color: deeppink;">Start Adding Your Contact Here 📞  </h1>
+				
+				<a th:href="@{/user/addform}" class="btn btn-primary mt-4 btn-block text-uppercase">Add new Contact</a>
+				
+				<hr>
+				<h3 class="m-y">Donate Us!</h3>
+				<input type="text" class="form-control my-1" id="payment_id" placeholder="Enter Amount Here">
+				
+				<div class="container text-center">
+			<button class="btn btn-success mt-3" onclick="payment()">Pay</button>		
+				</div>
+				
+			</div>
+		</div> 
+	</div>
+</div>
+		
+	</section>
+</body>
+</html>
